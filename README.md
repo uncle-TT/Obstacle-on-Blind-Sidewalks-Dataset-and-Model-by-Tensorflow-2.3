@@ -22,21 +22,26 @@ To install the current release, which includes support for
 Windows)*:
 
 ---
-可以使用以下代码下载tensorflow2.3.0，或者使用更强大的anaconda工具包，可以从这里下载 [清华源镜像站anaconda](https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/),安装说明看这里[anaconda3安装步骤](https://zhuanlan.zhihu.com/p/75717350)
+可以使用以下代码下载tensorflow2.3.0，或者使用更强大的anaconda工具包，可以从 [清华源镜像站anaconda](https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/),安装说明看 [anaconda3安装步骤](https://zhuanlan.zhihu.com/p/75717350)
 ---
 ```
 $ pip install tensorflow==2.3.0
 ```
-
+---
+目前ST官方也推出了自己的IDE工具包 [STM32CubeIDE](https://www.st.com/zh/development-tools/stm32cubeide.html),编译速度超级快，并且内置STM32CubeMX，支持HAL库和LL库生成代码，推荐使用。当然您也可以选择以下软件包搭配使用。
+---
 Keil 5.32  see the [ mdk5](https://www2.keil.com/mdk5)
 
 STM32 CubeMX 6.3.0 see the [ st_cubeMX](https://www.st.com/zh/development-tools/stm32cubemx.html)
 
-X-CUBE-AI 7.0.0  
+X-CUBE-AI 7.0.0  STM32 CubeMX 提供
 
-STM32Cube_FW_H7_V1.9.0 
+STM32Cube_FW_H7_V1.9.0 STM32 CubeMX 提供
 
-MobileNet_V2 see the [tensorflow_mobilenet_mobilenetV2_mobilenetV3](https://github.com/tensorflow/models/tree/master/research/slim/nets/mobilenet)
+---
+如果您要使用预训练模型，可以使用Tensorflow提供的预训练权重和激活值
+---
+model see the [tensorflow_model](https://github.com/tensorflow/models/tree/master/research/slim/nets)
 
 
 ## License

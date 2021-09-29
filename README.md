@@ -55,12 +55,9 @@ OBSC 数据集
 ---
 
 # MobileNet
-这个文件包括搭建
+这个文件包括
 [MobileNetV2](https://arxiv.org/abs/1801.04381)和
-[MobilenetV3](https://arxiv.org/abs/1905.02244) 网络. 网络架构 分别在[mobilenet_v2.py](mobilenet_v2.py) 和
-[mobilenet_v3.py](mobilenet_v3.py) 中定义.
-
-
+[MobilenetV3](https://arxiv.org/abs/1905.02244) 网络. 
 
 ## 预训练模型
 

@@ -32,7 +32,7 @@ STM32Cube_FW_H7_V1.9.0 由 STM32 CubeMX 提供
 ---
 开发板
 ---
-
+![image](https://github.com/uncle-TT/Obstacle-on-Blind-Sidewalks-Dataset-and-Model-by-Tensorflow-2.3/blob/main/model/nucleo_144_large.jpg)
 ---
 OBSC 数据集
 ---

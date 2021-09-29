@@ -66,7 +66,6 @@ OBSC 数据集
 
 ### Mobilenet V3 Imagenet Checkpoints
 
-All mobilenet V3 checkpoints were trained with image resolution 224x224. All
 所有的mobilenet V3检查点都经过图像分辨率为224x224的训练。延时都在毫秒级，除了大模型和小模型外，本文还包含了所谓的极简模型，这些模型具有与MobilenetV3相同的尺寸特性，但是它们没有使用任何高级网络块。虽然这些模型在CPU上效率较低，但在GPU / DSP上的性能要好得多。
 
 | Imagenet Checkpoint | MACs (M) | Params (M) | Top1 | Pixel 1 | Pixel 2 | Pixel 3 |

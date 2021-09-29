@@ -156,62 +156,6 @@ Classification Checkpoint                   | Quantized                         
 [quantized_v2_0.35_128]: https://storage.googleapis.com/mobilenet_v2/checkpoints/quantized_v2_128_35.tgz
 [quantized_v2_0.35_96]: https://storage.googleapis.com/mobilenet_v2/checkpoints/quantized_v2_96_35.tgz
 
-## Training
-
-### V3
-The following configuration, achieves 74.6% using 8 GPU setup and 75.2% using
-2x2 TPU setup.
-
-
-Final Top 1 Accuracy        |      74.6         |           |
-----------------------------|------------------|-----------|
-learning_rate               |   0.16     |Total learning rate. (Per clone learning rate is 0.02) |
-rmsprop_momentum            |   0.9      |    |
-rmsprop_decay               |   0.9      |    |
-rmsprop_epsilon             |   0.002    |    |
-learning_rate_decay_factor  |   0.99     |   |
-optimizer                   |   RMSProp  | |
-warmup_epochs               |   5        | Slim uses per clone epoch, so the the flag value is 0.6  |
-num_epochs_per_decay        |   3        | Slim uses per clone epoch, so the  flag value is 0.375 |
-batch_size (per chip)       |   192      |                   |
-moving_average_decay        |   0.9999   |                   |
-weight_decay                |   1e-5     |                   |
-init_stddev                 |    0.008   |                   |
-dropout_keep_prob           |   0.8      |                   |
-bn_moving_average_decay     |   0.997    |                   |
-bn_epsilon                  |      0.001 |                   |
-label_smoothing             |   0.1      |                   |
-
-### V2
-
-The numbers above can be reproduced using slim's
-[`train_image_classifier`](https://github.com/tensorflow/models/blob/master/research/slim/README.md#training-a-model-from-scratch).
-Below is the set of parameters that achieves 72.0% for full size MobileNetV2,
-after about 700K when trained on 8 GPU. If trained on a single GPU the full
-convergence is after 5.5M steps. Also note that learning rate and
-num_epochs_per_decay both need to be adjusted depending on how many GPUs are
-being used due to slim's internal averaging.
-
-```bash
---model_name="mobilenet_v2"
---learning_rate=0.045 * NUM_GPUS   #slim internally averages clones so we compensate
---preprocessing_name="inception_v2"
---label_smoothing=0.1
---moving_average_decay=0.9999
---batch_size= 96
---num_clones = NUM_GPUS # you can use any number here between 1 and 8 depending on your hardware setup.
---learning_rate_decay_factor=0.98
---num_epochs_per_decay = 2.5 / NUM_GPUS # train_image_classifier does per clone epochs
-```
-
-# Example
-
-See this [ipython notebook](mobilenet_example.ipynb) or open and run the network
-directly in
-[Colaboratory](https://colab.research.google.com/github/tensorflow/models/blob/master/research/slim/nets/mobilenet/mobilenet_example.ipynb).
-
-[MobilenetV2]: https://arxiv.org/abs/1801.04381
-[MobilenetV3]: https://arxiv.org/abs/1905.02244
 
 
 ## License

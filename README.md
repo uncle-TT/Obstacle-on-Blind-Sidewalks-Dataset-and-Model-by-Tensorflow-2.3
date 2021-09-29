@@ -34,7 +34,7 @@ OBSC 数据集
 ---
  [OBSD 百度网盘](https://pan.baidu.com/s/1wkU6P3CFKcUWcLv6ivyM-Q) 提取码：5zro
 ---
-如果您要使用预训练模型，可以使用Tensorflow提供的预训练权重和激活值
+您也可以使用Tensorflow提供的预训练权重和激活值
 ---
 [tensorflow_model](https://github.com/tensorflow/models/tree/master/research/slim/nets)
 

@@ -4,7 +4,6 @@
 这是一个在嵌入式微处理器上部署深度学习模型的开源项目。该项目建立了盲人出行环境障碍物识别的数据集，并在TensorFlow中训练了简化的MoblieNet模型。最后，将模型的二进制文件部署在UNCLEO- STM32H7A3ZIT-Q开发板上，使用STM32CubeMX和Keil5工具链编写软件功能实现了盲人出行环境的障碍物检测功能。
 ---
 
-This is an open source project on the deployment of deep learning to embedded microprocessors. The project establishes a data set for obstacle recognition of blind travel environment, and trains a simplified MoblieNet model in TensorFlow. Finally, the binary file of the model is deployed on the UNCLEO-STM32H7A3ZIT-Q development board to realize the function of obstacle detection of blind travel environment.
 
 ---
 在开始本项目前，需要的开发环境

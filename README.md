@@ -90,9 +90,9 @@ OBSC 数据集
 | [MobilenetEdgeTPU dm=1 (8-bit)] | 990      | 4.0        | 75.6 | 3.6     | 20.6        |
 
 
-Note: 8比特量化模型通过Tensorflow Lite 工具转换
+Note: 8比特量化模型通过Tensorflow Lite 
 [post training quantization](https://www.tensorflow.org/lite/performance/post_training_quantization)
-tool.
+转换.
 
 [Small minimalistic (float)]: https://storage.googleapis.com/mobilenet_v3/checkpoints/v3-small-minimalistic_224_1.0_float.tgz
 [Large minimalistic (float)]: https://storage.googleapis.com/mobilenet_v3/checkpoints/v3-large-minimalistic_224_1.0_float.tgz

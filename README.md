@@ -21,13 +21,17 @@ $ pip install tensorflow==2.3.0
 ---
 目前ST官方也推出了自己的IDE工具包 [STM32CubeIDE](https://www.st.com/zh/development-tools/stm32cubeide.html),编译速度超级快，并且内置STM32CubeMX，支持HAL库和LL库生成代码，推荐使用。当然您也可以选择以下软件包搭配使用。
 ---
-[Keil 5.32](https://www2.keil.com/mdk5)
+[Keil 5.32](https://www2.keil.com/mdk5)  -->ARM Compiler：V6.14 -->Optimization：-Oz image size
 
 [STM32 CubeMX 6.3.0](https://www.st.com/zh/development-tools/stm32cubemx.html)
 
 X-CUBE-AI 7.0.0  由 STM32 CubeMX 提供
 
 STM32Cube_FW_H7_V1.9.0 由 STM32 CubeMX 提供
+
+---
+开发板
+---
 
 ---
 OBSC 数据集

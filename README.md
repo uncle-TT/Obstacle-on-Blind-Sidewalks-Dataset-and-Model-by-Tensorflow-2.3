@@ -32,9 +32,10 @@ STM32Cube_FW_H7_V1.9.0 由 STM32 CubeMX 提供
 ---
 开发板
 ---
-本项目使用了ST提供的[STM32H7A3ZI-Q](https://www.st.com/zh/evaluation-tools/nucleo-h7a3zi-q.html)开发板，板载资源丰富，主频280 MHz、2M Flash,1376KB SRAM，支持TFT-LCD、JPEG codec、Chrom-GRC™、可选的片内SMPS、双模Octo-SPI（支持实时解密功能）
+本项目使用了ST提供的[NUCLEO-H7A3ZI-Q](https://www.st.com/zh/evaluation-tools/nucleo-h7a3zi-q.html)开发板，板载资源丰富，主频280 MHz、2M Flash,1376KB SRAM，支持TFT-LCD、JPEG codec、Chrom-GRC™、可选的片内SMPS、双模Octo-SPI（支持实时解密功能）
+本项目没有使用外部Flash和外部SRAM，所有功能都基于板载资源实现。
 ![image](https://github.com/uncle-TT/Obstacle-on-Blind-Sidewalks-Dataset-and-Model-by-Tensorflow-2.3/blob/main/model/nucleo_144_large.jpg)
-![image]()
+![image](https://github.com/uncle-TT/Obstacle-on-Blind-Sidewalks-Dataset-and-Model-by-Tensorflow-2.3/blob/main/model/en.ln1847_stm32_nucleo.jpg)
 ---
 OBSC 数据集
 ---

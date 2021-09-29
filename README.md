@@ -55,64 +55,19 @@ OBSC 数据集
 ---
 
 # MobileNet
-This folder contains building code for
-[MobileNetV2](https://arxiv.org/abs/1801.04381) and
-[MobilenetV3](https://arxiv.org/abs/1905.02244) networks. The architectural
-definition for each model is located in [mobilenet_v2.py](mobilenet_v2.py) and
-[mobilenet_v3.py](mobilenet_v3.py) respectively.
+这个文件包括搭建
+[MobileNetV2](https://arxiv.org/abs/1801.04381)和
+[MobilenetV3](https://arxiv.org/abs/1905.02244) 网络. 网络架构 分别在[mobilenet_v2.py](mobilenet_v2.py) 和
+[mobilenet_v3.py](mobilenet_v3.py) 中定义.
 
-For MobilenetV1 please refer to [this page](../mobilenet_v1.md)
 
-We have also introduced a family of MobileNets customized for the Edge TPU
-accelerator found in
-[Google Pixel4](https://blog.google/products/pixel/pixel-4/) devices. The
-architectural definition for MobileNetEdgeTPU is located in
-[mobilenet_v3.py](mobilenet_v3.py)
 
-## Performance
-
-### Mobilenet V3 latency
-
-This is the timing of [MobileNetV2] vs [MobileNetV3] using TF-Lite on the large
-core of Pixel 1 phone.
-
-![Mobilenet V2 and V3 Latency for Pixel 1.png](g3doc/latency_pixel1.png)
-
-### MACs
-
-MACs, also sometimes known as MADDs - the number of multiply-accumulates needed
-to compute an inference on a single image is a common metric to measure the
-efficiency of the model. Full size Mobilenet V3 on image size 224 uses ~215
-Million MADDs (MMadds) while achieving accuracy 75.1%, while Mobilenet V2 uses
-~300MMadds and achieving accuracy 72%. By comparison ResNet-50 uses
-approximately 3500 MMAdds while achieving 76% accuracy.
-
-Below is the graph comparing Mobilenets and a few selected networks. The size of
-each blob represents the number of parameters. Note for
-[ShuffleNet](https://arxiv.org/abs/1707.01083) there are no published size
-numbers. We estimate it to be comparable to MobileNetV2 numbers.
-
-![madds_top1_accuracy](g3doc/madds_top1_accuracy.png)
-
-### Mobilenet EdgeTPU latency
-
-The figure below shows the Pixel 4 Edge TPU latency of int8-quantized Mobilenet
-EdgeTPU compared with MobilenetV2 and the minimalistic variants of MobilenetV3
-(see below).
-
-![Mobilenet Edge TPU latency for Pixel 4 Edge TPU.png](g3doc/edgetpu_latency.png)
-
-## Pretrained models
+## 预训练模型
 
 ### Mobilenet V3 Imagenet Checkpoints
 
 All mobilenet V3 checkpoints were trained with image resolution 224x224. All
-phone latencies are in milliseconds, measured on large core. In addition to
-large and small models this page also contains so-called minimalistic models,
-these models have the same per-layer dimensions characteristic as MobilenetV3
-however, they don't utilize any of the advanced blocks (squeeze-and-excite
-units, hard-swish, and 5x5 convolutions). While these models are less efficient
-on CPU, we find that they are much more performant on GPU/DSP.
+所有的mobilenet V3检查点都经过图像分辨率为224x224的训练。延时都在毫秒级，除了大模型和小模型外，本文还包含了所谓的极简模型，这些模型具有与MobilenetV3相同的尺寸特性，但是它们没有使用任何高级网络块。虽然这些模型在CPU上效率较低，但在GPU / DSP上的性能要好得多。
 
 | Imagenet Checkpoint | MACs (M) | Params (M) | Top1 | Pixel 1 | Pixel 2 | Pixel 3 |
 | ------------------ | -------- | ---------- | ---- | ------- | ------- | ------- |
@@ -139,8 +94,7 @@ on CPU, we find that they are much more performant on GPU/DSP.
 | [MobilenetEdgeTPU dm=1 (8-bit)] | 990      | 4.0        | 75.6 | 3.6     | 20.6        |
 
 
-Note: 8-bit quantized versions of the MobilenetEdgeTPU models were obtained
-using Tensorflow Lite's
+Note: 8比特量化模型通过Tensorflow Lite 工具转换
 [post training quantization](https://www.tensorflow.org/lite/performance/post_training_quantization)
 tool.
 

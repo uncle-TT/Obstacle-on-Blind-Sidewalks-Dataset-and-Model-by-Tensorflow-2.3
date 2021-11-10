@@ -47,9 +47,6 @@ STM32Cube_FW_H7_V1.9.0 由 STM32 CubeMX 提供
 ---
 ![image](https://github.com/uncle-TT/Obstacle-on-Blind-Sidewalks-Dataset-and-Model-by-Tensorflow-2.3/blob/main/model/1.png)
 ---
-OBSC 数据集
----
- [OBSD 百度网盘](https://pan.baidu.com/s/1wkU6P3CFKcUWcLv6ivyM-Q) 提取码：5zro
 ---
 您也可以使用Tensorflow提供的预训练权重和激活值，以下内容来自[Tensorflow](https://github.com/tensorflow/models/tree/master/research/slim/nets)
 ---
